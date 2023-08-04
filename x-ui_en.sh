@@ -31,23 +31,23 @@ function LOGI() {
 [[ $EUID -ne 0 ]] && LOGE "${red}fatal error:please run this script with root privilege${plain}\n" && exit 1
 
 # check os
-if [[ -f /etc/redhat-release ]]; then
-    release="centos"
-elif cat /etc/issue | grep -Eqi "debian"; then
-    release="debian"
-elif cat /etc/issue | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-elif cat /proc/version | grep -Eqi "debian"; then
-    release="debian"
-elif cat /proc/version | grep -Eqi "ubuntu"; then
-    release="ubuntu"
-elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
-    release="centos"
-else
-    LOGE "check system os failed,please contact with author!\n" && exit 1
-fi
+# if [[ -f /etc/redhat-release ]]; then
+#     release="centos"
+# elif cat /etc/issue | grep -Eqi "debian"; then
+#     release="debian"
+# elif cat /etc/issue | grep -Eqi "ubuntu"; then
+#     release="ubuntu"
+# elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
+#     release="centos"
+# elif cat /proc/version | grep -Eqi "debian"; then
+#     release="debian"
+# elif cat /proc/version | grep -Eqi "ubuntu"; then
+#     release="ubuntu"
+# elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
+#     release="centos"
+# else
+#     LOGE "check system os failed,please contact with author!\n" && exit 1
+# fi
 
 os_version=""
 
